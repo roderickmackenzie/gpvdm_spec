@@ -1,3 +1,25 @@
+# -*- coding: utf-8 -*-
+#    General-purpose Photovoltaic Device Model - a drift diffusion base/Shockley-Read-Hall
+#    model for 1st, 2nd and 3rd generation solar cells.
+#    Copyright (C) 2017 Edward Grant  eayeg3 at nottingham.ac.uk
+#    Copyright (C) 2017 Roderick C. I. MacKenzie r.c.i.mackenzie at googlemail.com
+#
+#	https://www.gpvdm.com
+#	Room B86 Coates, University Park, Nottingham, NG7 2RD, UK
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License v2.0, as published by
+#    the Free Software Foundation.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License along
+#    with this program; if not, write to the Free Software Foundation, Inc.,
+#    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
 import sys
 
 import numpy as np
@@ -5,9 +27,9 @@ import datetime
 import os
 import openpyxl
 
-from pref import *
-from planet import *
-from solargeometry import *
+from spectrum_pref import *
+from spectrum_planet import *
+from spectrum_solargeometry import *
 
 class earthModel(object):
     def __init__(self, Latitude, Longitude, W, p, Date, Time, AOD, Timezone):
